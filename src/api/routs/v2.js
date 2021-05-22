@@ -45,7 +45,7 @@ async function handleGetAll(req, res) {
 }
 
 async function handleGetOne(req, res) {
-  const id = req.params._id;
+  const id = req.params.id;
   let theRecord = await req.model.get(id);
   res.status(200).json(theRecord);
 }
@@ -57,14 +57,14 @@ async function handleCreate(req, res) {
 }
 
 async function handleUpdate(req, res) {
-  const id = req.params._id;
+  const id = req.params.id;
   const obj = req.body;
   let updatedRecord = await req.model.update(id, obj);
   res.status(200).json(updatedRecord);
 }
 
 async function handleDelete(req, res) {
-  let id = req.params._id;
+  let id = req.params.id;
   console.log('id--->',id)
   let deletedRecord = await req.model.delete(id);
   console.log(deletedRecord)
