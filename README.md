@@ -28,3 +28,5 @@
 **run the app**
 - Run "node index.js"
 
+![](/image/lab8.JPG)
+
